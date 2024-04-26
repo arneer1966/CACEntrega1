@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--        La icono en solapa del navegador: -->
+    <link rel="icon" href="img/icono.png">
+    <!--        Defina el juego de caracteres utilizado:    -->
+    <meta charset="UTF-8">
+    <!--        Actualizar el documento cada 30 segundos:    -->
+    <meta http-equiv="refresh" content="600">
+    <!--        Definir palabras clave para motores de búsqueda:    -->
+    <meta name="keywords" content="CODOACODO4.0, HTML, CSS, Java, JavaScript">
+    <!--        Defina una descripción de su página web:    -->
+    <meta name="description" content="Codo A Codo streaming">
+    <!--        Definir el autor de una página:    -->
+    <meta name="author" content="Ariel Rubén Neer">
+    <!--        Configura la ventana gráfica para que su sitio web se vea bien en todos los dispositivos:    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--        titulo de la pagina -->
+    <script src="https://kit.fontawesome.com/cf8ddb4a4a.js" crossorigin="anonymous"></script>
+    <title>CodoACodoFlix</title>
+    <!--        AOS ANIMATION -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--        slick para animacion carrousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!--        La hoja de estilo externa -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- DETAILS/SUMMARY etiquetas semanticas especiales para docuemntacion -->
+    <details class="CAC40">
+        Codo A Codo 4.0 TP1
+        <summary><strong>Trabajo práctico integrador</strong><mark>(presionar en esta barra, para ver contenido de esta
+                entrega)</mark></summary>
+        <p><strong>Primera entrega: Trabajo práctico integrador<br>
+                Grupos separados: Comisión 24111<br>
+                <br>
+                <mark>
+                    Team:<br>
+
+                    Ariel Ruben Neer (Entrega individual)<br>
+                </mark>
+                <br>
+                Pre-Entrega Integrador Front:<br>
+                <br><br>
+                Deberán replicar la siguiente Página Web con lo visto en clase hasta el momento, puede ser código <br>
+                nativo o Bootstrap<br>
+                <br><br>
+                *Es importante recordar que quizá algunos eligieron una temática distinta a la planteada, y es válida
+                la<br>
+                entrega mientras se respete la estructura base<br>
+                <br><br>
+                La entrega será pegando el link de donde está alojado su trabajo, puede ser cualquiera de las <br>
+                siguientes alternativas:<br>
+                <br>
+                github-pages: (ver siguiente video)<br>
+                <br>
+                Servidor gratuito: https://www.000webhost.com/<br>
+                <br>
+                Alguna herramienta que permita alojar el trabajo.<br>
+                <br><br>
+                Les dejamos un tutorial de como publicar la pre-entrega en el aula virtual:<br>
+                <br>
+                <mark>Fecha entrega: 26/4/2024 <br>
+                    <br>
+                    <a href="https://github.com/arneer1966/CACEntrega1">archivos fuentes y
+                        documentacion:https://github.com/arneer1966/CACEntrega1</a></mark></strong>
+            <br>
+        </p>
+
+    </details>
+    <!--   Cabecera del formulario -->
+    <header>
+        <!-- titulo -->
+        <span>
+            <h1>CACFlix</h1>
+        </span>
+        <!-- buscador -->
+        <section>
+            <h2>¿Qué estas buscando para ver?</h2>
+            <form class="buscar">
+                <input type="text" placeholder="Buscar..." name="buscar">
+                <input type="submit" value="Buscar">
+            </form>
+        </section>
+        <!-- menu principal-->
+        <section>
+            <nav>
+                <!-- MENU una alternativa semántica a <ul>, pero los navegadores lo tratan (y lo exponen a través 
+                    del árbol de accesibilidad) como no diferente de <ul>. Representa una lista desordenada de elementos 
+                    (que están representados por elementos <li>) -->
+                <menu class="mhoriz" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                    data-aos-delay="0">
+                    <li class="itemhoriz"><a href="inicio.html">Inicio</a></li>
+                    <li class="itemhoriz"><a href="vistagral.html">Estrenos</a></li> <!--#estreno-->
+                    <li class="itemhoriz"><a href="prueba.html">Películas</a></li> <!--#pelicula-->
+                    <li class="itemhoriz"><a href="prueba.html">Series</a></li> <!--#serie-->
+                    <li class="itemhoriz"><a href="#">Categorias</a><!---->
+                        <menu class="mvert">
+                            <li class="itemvert"><a href="prueba.html">Acción</a></li> <!--#acc-->
+                            <li class="itemvert"><a href="prueba.html">Terror</a></li> <!--#ter-->
+                            <li class="itemvert"><a href="prueba.html">Aventura</a></li> <!--#ave-->
+                            <li class="itemvert"><a href="prueba.html">Drama</a></li> <!--#dra-->
+                            <li class="itemvert"><a href="prueba.html">infantil</a></li> <!--#inf-->
+                            <li class="itemvert"><a href="prueba.html">Fantasía</a></li> <!--#fan-->
+                            <li class="itemvert"><a href="prueba.html">Romance</a></li> <!--#rom-->
+                        </menu>
+                    </li>
+                    <li class="itemhoriz"><a href="contacto.html">Contacto</a></li>
+                </menu>
+            </nav>
+        </section>
+        <!-- fin menu principal-->
+
+        <!-- menu vertical y pelicuals flex contiene otros 2 flex -->
+        <section class="container" data-aos="flip-up" data-aos-duration="3000" data-aos-delay="0">
+            <!-- menu lateral izquierdo -->
+            <aside class="item container-vert">
+                <ul class="item-vert">
+                    <li><a href="prueba.html">Terminar de ver</a></li> <!--#visto-->
+                    <li><a href="vistagral.html">Estrenos</a></li> <!--#estreno-->
+                    <li><a href="prueba.html">Películas</a></li> <!--#pelicula-->
+                    <li><a href="prueba.html">Series</a></li> <!--#serie-->
+                    <li><a href="prueba.html">Categorias</a></li> <!--#categorias-->
+                </ul>
+            </aside>
+            <!-- fin menu lateral izquierdo -->
+            <!-- contenedor de peliculas -->
+            <section class="item">
+                <article class="container-horiz carrousel1">
+                    <div class="item-horiz"><img src="./pelis/peli_13.jpg" alt="Peli 13" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_14.jpg" alt="Peli 14" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_15.jpg" alt="Peli 15" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_16.jpg" alt="Peli 16" width="280" height="150"></div>
+                    <div class="item-horiz"><a href="">vista 5</a></div>
+                    <div class="item-horiz"><a href="">vista 6</a></div>
+                    <div class="item-horiz"><a href="">vista 7</a></div>
+                    <div class="item-horiz"><a href="">vista 8</a></div>
+                    <div class="item-horiz"><a href="">vista 9</a></div>
+                    <div class="item-horiz"><a href="">vista 10</a></div>
+                </article>
+                <article class="container-horiz carrousel">
+                    <div class="item-horiz"><img src="./pelis/estreno1.jpg" alt="Estreno 1" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno2.jpg" alt="Estreno 2" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno3.jpg" alt="Estreno 3" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno4.jpg" alt="Estreno 4" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno5.jpg" alt="Estreno 5" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno6.jpg" alt="Estreno 6" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno7.jpg" alt="Estreno 7" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno8.jpg" alt="Estreno 8" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno9.jpg" alt="Estreno 9" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/estreno10.jpg" alt="Estreno 10" width="280" height="150"></div>
+                </article>
+                <article class="container-horiz carrousel1">
+                    <div class="item-horiz"><img src="./pelis/peli_1.jpg" alt="Peli 1" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_2.jpg" alt="Peli 2" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_3.jpg" alt="Peli 3" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_4.jpg" alt="Peli 4" width="280" height="150"></div>
+                    <div class="item-horiz"><a href="">Peliculas 5</a></div>
+                    <div class="item-horiz"><a href="">Peliculas 6</a></div>
+                    <div class="item-horiz"><a href="">Peliculas 7</a></div>
+                    <div class="item-horiz"><a href="">Peliculas 8</a></div>
+                    <div class="item-horiz"><a href="">Peliculas 9</a></div>
+                    <div class="item-horiz"><a href="">Peliculas 10</a></div>
+                </article>
+                <article class="container-horiz carrousel1">
+                    <div class="item-horiz"><img src="./pelis/peli_5.jpg" alt="Peli 5" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_6.jpg" alt="Peli 6" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_7.jpg" alt="Peli 7" width="280" height="150"></div>
+                    <div class="item-horiz"><img src="./pelis/peli_8.jpg" alt="Peli 8" width="280" height="150"></div>
+                    <div class="item-horiz"><a href="">Series 5</a></div>
+                    <div class="item-horiz"><a href="">Series 6</a></div>
+                    <div class="item-horiz"><a href="">Series 7</a></div>
+                    <div class="item-horiz"><a href="">Series 8</a></div>
+                    <div class="item-horiz"><a href="">Series 9</a></div>
+                    <div class="item-horiz"><a href="">Series 10</a></div>
+                </article>
+                <article class="container-horiz carrousel1">
+                    <div class="item-horiz"><a href="prueba.html">Acción</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Terror</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Aventura</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Drama</a></div>
+                    <div class="item-horiz"><a href="prueba.html">infantil</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Fantasía</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Romance</a></div>
+                </article>
+                <!-- fin contenedor de peliculas -->
+            </section>
+            <!-- fin flex principal -->
+        </section>
+        <!--fin menu vertical y pelicuals flex contiene otros 2 flex -->
+    </header>
+    <!-- Seccion main -->
+    <main>
+
+        <section id="estreno">
+        </section>
+
+        <section id="pelicula">
+        </section>
+
+        <section id="serie">
+        </section>
+
+        <section id="acc">
+        </section>
+
+        <section id="ter">
+        </section>
+
+        <section id="ave">
+        </section>
+
+        <section id="dra">
+        </section>
+
+        <section id="inf">
+        </section>
+
+        <section id="fan">
+        </section>
+
+        <section id="rom">
+        </section>
+
+    </main>
+
+    <!-- pie de pagina -->
+    <footer data-aos="flip-right">
+        <!-- <table clase="foot"> -->
+        <table>
+            <tr>
+                <td>
+                    <h6>Contacto: cacflix2024@gmail.com</h6>
+                </td>
+                <td> || </td>
+                <td>Síguenos en: </td>
+                <td> | </td>
+                <td><a href="https://X.com/cacflix" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </td>
+                <td> | </td>
+                <td><a href="https://facebook.com/cacflix" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </td>
+                <td> | </td>
+                <td><a href="https://instagram.com/cacflix" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </td>
+                <td> || </td>
+                <td>
+                    <h6>&copy 2024 Codo A Codo Flix (primera entrega).</h6>
+                </td>
+        </table>
+    </footer>
+
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- SLICK ANIMATION -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        // inicializa AOS
+        AOS.init();
+        // INICIALIZA SLICK
+        $(document).ready(function () {
+            $('.carrousel').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 4,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+        $(document).ready(function () {
+            $('.carrousel1').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 4,
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
