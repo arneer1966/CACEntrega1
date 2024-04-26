@@ -1,0 +1,163 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+    font-family: 'Open Sans';
+    font-size: xx-large;
+    font: bold;
+}
+
+body {
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    min-width: 50%;
+}
+
+button {
+    color: brown;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: double;
+    color: beige;
+    margin-top: 1%;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    width: fit-content;
+    height: 620px;
+    align-items: center;
+    justify-content: stretch;
+    margin: 0.5% auto;
+    border: 2px black;
+    border-radius: 10px;
+    background: gray;
+    overflow: auto;
+
+    .griditem {
+        width: 280px;
+        height: 150px;
+        border: 2px solid red;
+        border-radius: 10px;
+        background-color: grey;
+        list-style: none;
+
+        &:hover {
+            transition: transform 0.1s;
+            transform: scale(0.9, 0.9) !important;
+            z-index: 1;
+        }
+    }
+
+}
+
+.boton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &:hover {
+        justify-content: space-around;
+    }
+
+    #ant,
+    #sig,
+    #ret,
+    #res {
+        display: block;
+        background-color: aquamarine;
+        border: solid 2px blue;
+        border-radius: 15%;
+        width: 220px;
+        height: 45px;
+        transition: transform 0, 3s, box-shadow 0, 3s;
+
+        &:hover {
+            background-color: aqua;
+            transform: scale(1.1, 1.1);
+            box-shadow: 0 0 20% black;
+        }
+    }
+}
+
+
+@media screen and (width <=1200px) {
+    .gridcontainer {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    h1 {
+        font-size: x-large;
+    }
+
+    button {
+        font-size: x-large;
+    }
+
+    .boton {
+        flex-wrap: wrap;
+    }
+
+    .griditem {
+        width: 250px;
+    }
+}
+
+
+@media screen and (width <=992px) {
+    .gridcontainer {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    h1 {
+        font-size: large;
+    }
+
+    button {
+        font-size: large;
+    }
+
+    .griditem {
+        width: 200px;
+    }
+
+    #ant,
+    #sig,
+    #ret,
+    #res {
+        width: 120px;
+        font-size: large;
+    }
+}
+
+@media screen and (width <=768px) {
+    .gridcontainer {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .griditem {
+        width: 150px;
+    }
+
+    #ant,
+    #sig,
+    #ret,
+    #res {
+        width: 80px;
+        font-size: large;
+    }
+
+}
+
+@media screen and (width <=576px) {}

@@ -1,0 +1,14 @@
+* {
+    margin: 20;
+    padding: 10;
+    box-sizing: content-box;
+    font-family: 'Open Sans';
+    font-size: xx-large;
+    font: bold;
+}
+
+body {
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
